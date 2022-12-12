@@ -13,10 +13,17 @@ const Users = ({ users, ...rest }) => {
                     <th scope="col">Профессия</th>
                     <th scope="col">Всретился, раз</th>
                     <th scope="col">Отценки</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
                 </tr>
                 </thead>
                 <tbody>
-                    {rest.map(item => User(item))}
+                    {users.map((user) => {
+                        return <User 
+                            {...user}
+                            {...rest} 
+                        />
+                    })}
                 </tbody>
             </table>
         </>
