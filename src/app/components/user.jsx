@@ -5,7 +5,6 @@ import BookMark from "./bookmark";
 const User = ({
     _id, name, rate, completedMeetings, profession, qualities, onDelet, bookmark, onBookmark
 }) => {
-    console.log(bookmark)
     return( 
             <>
                 <tr key={_id}>
@@ -14,7 +13,7 @@ const User = ({
                     <td>{profession.name}</td>
                     <td>{completedMeetings}</td>
                     <td>{rate}</td>
-                    <td><span onClick={() => onBookmark(_id)}>{BookMark(bookmark)}</span></td>
+                    <td>{<BookMark status={bookmark} onClick={() => onBookmark(_id)} />}</td>
                     <td><button className="btn btn-danger m-1" onClick={() => onDelet(_id)}>delete</button></td>
                 </tr>
             </>

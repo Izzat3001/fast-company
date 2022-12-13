@@ -13,9 +13,8 @@ function App () {
     };
 
     const hendleToggleBookMark = (id) => {
-        console.log( "bookmark", id)
-        const toggleBookMark = users.filter(item => item._id === id
-            ? {...item, bookmark: item.bookmark = true}
+        const toggleBookMark = users.map(item => item._id === id
+            ? {...item, bookmark: !item.bookmark}
             : item
             );
             setUsers(toggleBookMark)
