@@ -13,10 +13,13 @@ module.exports = {
     rules: {
         indent: ["error", 4],
         semi: [2, "always"],
-        "space-before-function-paren": ["error", "never"],
+        "space-before-function-paren": [
+            "error",
+            { anonymous: "always", named: "never" }
+        ],
         quotes: ["error", "double", { allowTemplateLiterals: true }],
         "react/prop-types": "off",
-        "multiline-ternary": ["error", "never"],
+        "multiline-ternary": ["error", "always-multiline"],
         "react/react-in-jsx-scope": "off"
     }
 };
