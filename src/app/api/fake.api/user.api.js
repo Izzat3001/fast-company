@@ -148,7 +148,7 @@ const fetchAll = () =>
         window.setTimeout(function () {
             // console.log("resolve", users);
             resolve(users);
-        }, 2000);
+        }, 3000);
     });
 
 export default {
